@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obozowo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Obozowo</h1>
+    </header>
+    <nav>
+        <a href="#" data-tab="home">Strona Główna</a>
+        <a href="#" data-tab="calendar">Terminarz</a>
+        <a href="#" data-tab="info">Informacje</a>
+        <a href="#" data-tab="songbook">Śpiewnik</a>
+    </nav>
+    <div class="container">
+        <div id="home" class="tab-content active">
+            <h2>Witamy na stronie Obozowo!</h2>
+            <p>Tutaj znajdziesz informacje o obozach oraz teksty piosenek na ogniska.</p>
+            <div class="comments-section">
+                <h3>Komentarze</h3>
+                <textarea placeholder="Dodaj komentarz"></textarea>
+                <button>Dodaj</button>
+            </div>
+        </div>
+        <div id="calendar" class="tab-content">
+            <h2>Terminarz</h2>
+            <div class="calendar">
+                <table>
+                    <tr>
+                        <th>Pon</th>
+                        <th>Wt</th>
+                        <th>Śr</th>
+                        <th>Czw</th>
+                        <th>Pt</th>
+                        <th>Sob</th>
+                        <th>Nd</th>
+                    </tr>
+                    <!-- Calendar rows will go here -->
+                </table>
+            </div>
+        </div>
+        <div id="info" class="tab-content">
+            <h2>Informacje</h2>
+            <p>Strona została stworzona, aby ułatwić organizację obozów oraz dostarczyć piosenki na ogniska.</p>
+            <p>Kontakt: kontakt@obozowo.pl</p>
+        </div>
+        <div id="songbook" class="tab-content">
+            <h2>Śpiewnik</h2>
+            <div class="songs-list">
+                <button onclick="showSong('song1')">Balu - Time goes its way</button>
+                <button onclick="showSong('song2')">Piosenka 2</button>
+                <!-- Add more songs here -->
+            </div>
+        </div>
+        <div id="song1" class="song-detail">
+            <h3>Balu - Time goes its way</h3>
+            <p>Birds keep singing spring by spring blah...</p>
+            <div id="videoContainer1">
+                <video controls width="560" height="315">
+                    <source src="C:\Users\balow\Desktop\HTML Testy teściki\Piosenki MP4\Balu - Time goes its way.mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div>
+                <button onclick="changeKey(-1)">Obniż tonację</button>
+                <button onclick="changeKey(1)">Podwyższ tonację</button>
+            </div>
+        </div>
+        <div id="song2" class="song-detail">
+            <h3>Piosenka 2</h3>
+            <p>Tekst piosenki 2...</p>
+            <div id="videoContainer2">
+                <video controls width="560" height="315">
+                    <source src="path/to/mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div>
+                <button onclick="changeKey(-1)">Obniż tonację</button>
+                <button onclick="changeKey(1)">Podwyższ tonację</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Obozowo. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
